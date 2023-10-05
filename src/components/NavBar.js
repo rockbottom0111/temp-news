@@ -8,7 +8,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 const navItems = [
     {
       path: "/",
-      name: "HOME",
+      name: "घर",
     },
     {
       path: "/national",
@@ -112,7 +112,7 @@ export default function NavBar () {
 
   return (
     <nav
-      className={`mx-auto container shadow-md overflow-x-scroll  flex flexWrap p-5 flex-col md:flex-row items-center ${
+      className={`mx-auto container shadow-md overflow-x-scroll flex flexWrap p-5 flex-col md:flex-row items-center ${
         isScrolled ? 'sticky top-0 z-30 w-full p-6 bg-black sm:px-4 shadow' : 'bg-blue-500'
       } py-4`}
     >
@@ -125,7 +125,7 @@ export default function NavBar () {
           return (
             <Link
               key={item.path}
-              className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
+              className={`px-4 py-2 rounded-md font-bold font-color-white text-sm lg:text-base relative no-underline duration-300 ease-in ${
                 isActive ? "text-zinc-100" : "text-zinc-400"
               }`}
               data-active={isActive}
@@ -138,7 +138,7 @@ export default function NavBar () {
               {item.path === hoveredPath && (
                 
                 <motion.div
-                  className="absolute bottom-0 left-0 h-full  rounded-md -z-10"
+                  className="absolute bottom-0 left-0 h-full rounded-md -z-10"
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{
